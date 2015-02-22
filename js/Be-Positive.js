@@ -47,8 +47,8 @@ BloodTransfusionRules = {
   
   check_stock : function(blood_inventory, compatible_types) {
     for (var i = 0; i < compatible_types.length; i++) {
-      if (blood_inventory.i > 0) {
-        return i;
+      if (blood_inventory[compatible_types[i]] > 0) {
+        return compatible_types[i];
       }
     }
 
